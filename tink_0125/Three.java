@@ -3,21 +3,22 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class Three {
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-
-        int k = sc.nextInt();
-        int x = sc.nextInt();
-
-        int[] arr = new int[n - 2];
-        
-        int goodDays = 0;
-        
-        for (int i = 0; i < n - 2; ++i) {
-            arr[i] = sc.nextInt();
+        int n;
+        int m;
+        int k;
+        int x;
+        int[] arr;
+        int goodDays;
+        try (Scanner sc = new Scanner(System.in)) {
+            n = sc.nextInt();
+            m = sc.nextInt();
+            k = sc.nextInt();
+            x = sc.nextInt();
+            arr = new int[n - 2];
+            for (int i = 0; i < n - 2; ++i) {
+                arr[i] = sc.nextInt();
+            }
         }
-        sc.close();
         int countChanges = 0;
         Arrays.sort(arr);
         int index1 = n - 1;
